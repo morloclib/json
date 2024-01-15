@@ -1,0 +1,25 @@
+module json (JsonObj)
+
+import conventions (Str)
+
+source Py from "py/main.py"
+  ( "morloc_packJsonObj" as packJsonObj
+  , "morloc_unpackJsonObj" as unpackJsonObj
+  )
+
+source R from "r/main.R"
+  ( "morloc_packJsonObj" as packJsonObj
+  , "morloc_unpackJsonObj" as unpackJsonObj
+  )
+
+source Cpp from "cpp/main.hpp"
+  ( "morloc_packJsonObj" as packJsonObj
+  , "morloc_unpackJsonObj" as unpackJsonObj
+  )
+
+type Py => JsonObj = "dict"
+type R => JsonObj = "list"
+type Cpp => JsonObj = "ordered_json"
+
+packJsonObj   :: pack   => Str -> JsonObj
+unpackJsonObj :: unpack => JsonObj -> Str 

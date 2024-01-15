@@ -1,0 +1,13 @@
+module testjson (foo)
+
+import json (JsonObj)
+
+source Cpp from "foo.hpp" ("cppfoo")
+source R from "foo.R" ("rfoo")
+source Py from "foo.py" ("pyfoo")
+
+cppfoo :: JsonObj -> JsonObj
+rfoo :: JsonObj -> JsonObj
+pyfoo :: JsonObj -> JsonObj
+
+foo = cppfoo . rfoo . pyfoo 

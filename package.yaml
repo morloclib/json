@@ -1,0 +1,11 @@
+name: json
+version: 0.0.0
+homepage: https://github.com/morloc-lib/json
+synopsis: json handling
+description: json handling
+category: language-base
+license: MIT
+author: "Zebulun Arendsee"
+maintainer: "zbwrnz@gmail.com"
+github: https://github.com/morloc-lib/json
+bug-reports: https://github.com/morloc-lib/json
