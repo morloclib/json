@@ -1,6 +1,6 @@
 module json (JsonObj)
 
-import conventions (Str)
+import types (Str)
 
 type Py => JsonObj = "dict"
 type R => JsonObj = "list"
